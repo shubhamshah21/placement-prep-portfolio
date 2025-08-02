@@ -5,45 +5,22 @@ const SkillsSection = () => {
     {
       title: "Programming Languages",
       icon: "💻",
-      skills: [
-        { name: "C++", level: 90, color: "bg-tech-blue" },
-        { name: "Python", level: 85, color: "bg-tech-yellow" },
-        { name: "Java", level: 80, color: "bg-tech-red" },
-        { name: "JavaScript", level: 85, color: "bg-tech-orange" },
-        { name: "C", level: 75, color: "bg-tech-purple" }
-      ]
+      skills: ["C++", "Python", "Java", "JavaScript", "C"]
     },
     {
       title: "Web Technologies",
       icon: "🌐",
-      skills: [
-        { name: "React", level: 85, color: "bg-tech-blue" },
-        { name: "HTML/CSS", level: 90, color: "bg-tech-orange" },
-        { name: "Node.js", level: 75, color: "bg-tech-green" },
-        { name: "Express.js", level: 70, color: "bg-tech-purple" },
-        { name: "Tailwind CSS", level: 85, color: "bg-tech-blue" }
-      ]
+      skills: ["React", "HTML/CSS", "Node.js", "Express.js", "Tailwind CSS"]
     },
     {
       title: "Tools & Technologies",
       icon: "🛠️",
-      skills: [
-        { name: "Git", level: 85, color: "bg-tech-red" },
-        { name: "VS Code", level: 90, color: "bg-tech-blue" },
-        { name: "Docker", level: 65, color: "bg-tech-purple" },
-        { name: "Linux", level: 75, color: "bg-tech-orange" },
-        { name: "Postman", level: 80, color: "bg-tech-green" }
-      ]
+      skills: ["Git", "VS Code", "Docker", "Linux", "Postman"]
     },
     {
       title: "Databases",
       icon: "🗄️",
-      skills: [
-        { name: "MySQL", level: 80, color: "bg-tech-blue" },
-        { name: "MongoDB", level: 70, color: "bg-tech-green" },
-        { name: "Firebase", level: 75, color: "bg-tech-orange" },
-        { name: "PostgreSQL", level: 65, color: "bg-tech-purple" }
-      ]
+      skills: ["MySQL", "MongoDB", "Firebase", "PostgreSQL"]
     }
   ];
 
@@ -68,20 +45,14 @@ const SkillsSection = () => {
                   <h3 className="text-xl font-bold text-foreground">{category.title}</h3>
                 </div>
 
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium text-foreground">{skill.name}</span>
-                        <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-muted rounded-full h-2">
-                        <div 
-                          className={`h-2 rounded-full transition-all duration-1000 ease-out ${skill.color}`}
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
-                    </div>
+                    <span 
+                      key={skillIndex}
+                      className="tech-badge bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
               </CardContent>

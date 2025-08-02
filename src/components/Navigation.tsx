@@ -49,15 +49,6 @@ const Navigation = () => {
               </button>
             ))}
           </div>
-
-          <Button 
-            variant="outline" 
-            size="sm"
-            onClick={() => window.open('/resume.pdf', '_blank')}
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-          >
-            Resume
-          </Button>
         </div>
       </div>
     </nav>

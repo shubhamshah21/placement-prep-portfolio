@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Download } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import heroBg from '@/assets/hero-bg.jpg';
 
 const HeroSection = () => {
@@ -51,15 +51,7 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Button 
-              size="lg" 
-              className="gradient-primary text-white hover:opacity-90 transition-opacity"
-              onClick={() => window.open('/resume.pdf', '_blank')}
-            >
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </Button>
+          <div className="flex justify-center mb-8">
             <Button 
               variant="outline" 
               size="lg"
