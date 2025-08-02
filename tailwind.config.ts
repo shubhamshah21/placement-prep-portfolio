@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -26,7 +29,12 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					50: 'hsl(var(--primary-50))',
+					100: 'hsl(var(--primary-100))',
+					500: 'hsl(var(--primary-500))',
+					600: 'hsl(var(--primary-600))',
+					700: 'hsl(var(--primary-700))',
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -51,6 +59,19 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				tech: {
+					blue: 'hsl(var(--tech-blue))',
+					green: 'hsl(var(--tech-green))',
+					orange: 'hsl(var(--tech-orange))',
+					purple: 'hsl(var(--tech-purple))',
+					red: 'hsl(var(--tech-red))',
+					yellow: 'hsl(var(--tech-yellow))',
+				},
+				gradient: {
+					from: 'hsl(var(--gradient-from))',
+					via: 'hsl(var(--gradient-via))',
+					to: 'hsl(var(--gradient-to))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
